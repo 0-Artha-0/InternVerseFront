@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose Your Industry</title>
+</head>
+<body>
+    <h1>Select an Industry</h1>
+    <form action="{{ url_for('internship') }}" method="post">
+        <select name="industry">
+            <option value="Fintech">Fintech</option>
+            <option value="Healthcare">Healthcare</option>
+            <option value="Logistics">Logistics</option>
+            <option value="Marketing">Marketing</option>
+        </select>
+        <button type="submit">Start Internship</button>
+    </form>
+</body>
+</html>
