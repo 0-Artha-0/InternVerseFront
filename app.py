@@ -14,4 +14,4 @@ app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1, x_host=1)  # needed for url_for
 app.config['BACKEND_API_URL'] = os.environ.get('BACKEND_API_URL', 'http://localhost:8000')
 
 # Import routes
-from frontend import routes
+import routes
