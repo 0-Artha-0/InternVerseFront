@@ -7,8 +7,8 @@ import os
 import json
 import requests
 from flask import render_template, redirect, url_for, flash, request, session, jsonify
-from frontend.app import app
-from frontend.utils import get_api_url, handle_api_error
+from app import app
+from utils import get_api_url, handle_api_error
 
 # Constants
 API_BASE_URL = app.config['BACKEND_API_URL']
