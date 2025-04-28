@@ -11,8 +11,8 @@ from app import app
 from utils import get_api_url, handle_api_error
 
 # Constants
-API_BASE_URL = app.config['BACKEND_API_URL'] = os.getenv('BACKEND_API_URL', 'thepromptocrats-hackathon-stg-wa-uaen-02-cnaffvfcbbf0fsak.uaenorth-01.azurewebsites.net')
-
+app.config['BACKEND_API_URL'] = os.getenv('BACKEND_API_URL', 'thepromptocrats-hackathon-stg-wa-uaen-02-cnaffvfcbbf0fsak.uaenorth-01.azurewebsites.net')
+API_BASE_URL = app.config['BACKEND_API_URL']
 # Auth routes
 @app.route('/')
 def index():
