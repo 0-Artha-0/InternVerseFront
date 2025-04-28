@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}Start Internship | Virtual Internship Simulator{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white text-center py-3">
+                    <h4 class="mb-0">Start Your {{ industry.name }} Virtual Internship</h4>
+                </div>
+                <div class="card-body p-4">
+                    <div class="text-center mb-4">
+                        <div class="display-1 text-primary mb-3">
+                            <i class="fas {{ industry.icon }}"></i>
+                        </div>
+                        <h5 class="mb-3">{{ industry.name }} Industry Experience</h5>
+                        <p>{{ industry.description }}</p>
+                    </div>
+                    
+                    <div class="alert alert-info mb-4">
+                        <h5><i class="fas fa-info-circle me-2"></i> What to Expect</h5>
+                        <p class="mb-2">Our AI-powered platform will generate a personalized virtual internship experience for you in the {{ industry.name }} industry:</p>
+                        <ul class="mb-0">
+                            <li>Custom internship description based on your profile</li>
+                            <li>Weekly professional tasks tailored to your major</li>
+                            <li>AI supervisor to provide guidance and feedback</li>
+                            <li>Resources to help you complete tasks effectively</li>
+                            <li>A certificate of completion when you finish the internship</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="alert alert-warning mb-4">
+                        <h5><i class="fas fa-exclamation-triangle me-2"></i> Please Note</h5>
+                        <p class="mb-0">Starting an internship requires commitment. You'll need to complete tasks regularly to make progress. Most internships take 4-6 weeks to complete, depending on your pace.</p>
+                    </div>
+                    
+                    <form method="POST" action="{{ url_for('start_internship', industry_id=industry.id) }}">
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="consent" required>
+                            <label class="form-check-label" for="consent">
+                                I understand that this virtual internship will generate personalized content using AI technology based on my profile information.
+                            </label>
+                        </div>
+                        
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg">Generate My Internship</button>
+                            <a href="{{ url_for('industries') }}" class="btn btn-outline-secondary">Select Different Industry</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
