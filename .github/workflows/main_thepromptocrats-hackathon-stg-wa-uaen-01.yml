@@ -68,4 +68,4 @@ jobs:
         with:
           app-name: 'thepromptocrats-hackathon-stg-wa-uaen-01'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A44E6143F505480FA9D7D9AE6848C5A0 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_321E09EC6B874A719EEC8046088481BC }}
